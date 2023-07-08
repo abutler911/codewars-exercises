@@ -93,3 +93,20 @@ function toCamelCase(str){
   console.log(decodeMorse('.... . -.--   .--- ..- -.. .')); // Outputs: "HEY JUDE"
 
   
+
+
+
+  Array.prototype.last = function() {
+    if (this.length === 0) return -1;
+    return this[this.length - 1];
+  }
+  
+  // Testing with some arrays
+  let nums1 = [null, {}, 3];
+  console.log(nums1.last()); // Outputs: 3
+  
+  let nums2 = [];
+  console.log(nums2.last()); // Outputs: -1
+
+  
+  

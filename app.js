@@ -109,4 +109,24 @@ function toCamelCase(str){
   console.log(nums2.last()); // Outputs: -1
 
   
-  
+  function getSum(a, b) {
+    let min = Math.min(a, b),
+        max = Math.max(a, b),
+        sum = 0;
+
+    for(let i = min; i <= max; i++) {
+        sum += i;
+    }
+
+    return sum;
+}
+
+// Test the function
+console.log(getSum(1, 0)); // Output: 1
+console.log(getSum(1, 2)); // Output: 3
+console.log(getSum(0, -1)); // Output: -1
+console.log(getSum(-1, 2)); // Output: 2
+
+
+
+

@@ -127,6 +127,64 @@ console.log(getSum(1, 2)); // Output: 3
 console.log(getSum(0, -1)); // Output: -1
 console.log(getSum(-1, 2)); // Output: 2
 
+console.log('***** POP GROWTH ******')
+function populationGrowth(p0, percent, delta, p) {
+  let years = 0;
+  while (p0 < p) {
+      p0 += p0 * (percent / 100) + delta;
+      years++;
+  }
+  return years;
+}
+
+// Test the function
+console.log(populationGrowth(1000, 2, 50, 2000)); 
+
+
+console.log('Factorial');
+
+function lastNonZeroDigit(n) {
+  if (n < 10) {
+      return [1, 1, 2, 6, 4, 2, 2, 4, 2, 8][n];
+  }
+
+  // Count the number of fives in n!
+  let fiveCount = 0;
+  let i = 5;
+  while (i <= n) {
+      fiveCount += Math.floor(n / i);
+      i *= 5;
+  }
+
+  // Calculate the product of the last digits of each number from 1 to n, 
+  // excluding multiples of 5.
+  let lastDigit = 1;
+  for (i = 1; i <= n; i++) {
+      if (i % 5 !== 0) {
+          lastDigit = (lastDigit * i) % 10;
+      }
+  }
+
+  // Adjust for the extra factor of 2 for each 5 in n!
+  lastDigit = (lastDigit * Math.pow(2, fiveCount)) % 10;
+
+  return lastDigit;
+}
+
+// Test the function
+console.log(lastNonZeroDigit(12)); // Output: 6
+
+
+console.log('**** PIG LATIN ****')
+
+// Move the first letter of each word to the end of it, then add "ay" to the end of the word. Leave punctuation marks untouched.
+
+
+function pigLatin(phrase) {
+  console.log(phrase.split(' '))
+}
+
+pigLatin('Hello, how are you?')
 
 
 
